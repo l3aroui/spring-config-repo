@@ -8,6 +8,6 @@ spring:
             - Path=/api/v1/analyse-facture/**
 
         - id: stockage-facture-ms
-          uri: lb://stockage-facture-ms
+          uri: lb:http://STOCKAGE-FACTURE-MS
           predicates:
             - Path=/api/v1/stockage-facture/**
