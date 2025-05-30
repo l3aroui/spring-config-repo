@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: analyse-facture-ms
-          uri: lb://analyse-facture-ms
+          uri: lb:http://ANALYSE-FACTURE-MS
           predicates:
             - Path=/api/v1/analyse-facture/**
 
