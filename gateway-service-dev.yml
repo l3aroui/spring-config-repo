@@ -2,11 +2,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: stockage-facture-ms
-          uri: lb://stockage-facture-ms
-          predicates:
-            - path=/api/v1/stockage-facture/**
         - id: analyse-facture-ms
           uri: lb://analyse-facture-ms
           predicates:
-            - path=/api/v1/analyse-facture/**
+            - Path=/api/v1/analyse-facture/**
+        - id: stockage-facture-ms
+          uri: lb://stockage-facture-ms
+          predicates:
+            - Path=/api/v1/stockage-facture/**
