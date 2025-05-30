@@ -11,3 +11,7 @@ spring:
           uri: lb://STOCKAGE-FACTURE-MS
           predicates:
             - Path=/api/v1/stockage-facture/**
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web.reactive.handler: TRACE            
