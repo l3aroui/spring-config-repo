@@ -1,0 +1,25 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery-service
+
+eureka:
+  instance:
+    hostname: discovery           # Matches container name — good
+    prefer-ip-address: false
+  client:
+    register-with-eureka: false   # Correct for standalone server
+    fetch-registry: false
+    service-url:
+      defaultZone: http://discovery:8761/eureka/  # OK (Docker hostname)
+  server:
+    enable-self-preservation: false               # For testing, good
+    eviction-interval-timer-in-ms: 4000           # Faster cleanup
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
