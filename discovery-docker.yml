@@ -7,16 +7,16 @@ spring:
 
 eureka:
   instance:
-    hostname: discovery           # Matches container name — good
+    hostname: discovery
     prefer-ip-address: false
   client:
-    register-with-eureka: false   # Correct for standalone server
+    register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://discovery:8761/eureka/  # OK (Docker hostname)
+      defaultZone: http://discovery:8761/eureka/
   server:
-    enable-self-preservation: false               # For testing, good
-    eviction-interval-timer-in-ms: 4000           # Faster cleanup
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
 
 management:
   endpoints:
