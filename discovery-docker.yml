@@ -3,19 +3,19 @@ server:
 
 spring:
   application:
-    name: discovery-service
+    name: discovery-service  # Good, but make sure this matches everywhere
 
 eureka:
   instance:
-    hostname: discovery
+    hostname: discovery  # Matches container name - good
     prefer-ip-address: false
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false  # Correct for standalone server
+    fetch-registry: false       # Correct for standalone server
     service-url:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  # Self-reference
   server:
-    enable-self-preservation: false
+    enable-self-preservation: false  # For testing
     eviction-interval-timer-in-ms: 4000
 
 management:
