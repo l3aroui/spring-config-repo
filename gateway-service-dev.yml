@@ -11,3 +11,5 @@ spring:
           uri: lb:http://STOCKAGE-FACTURE-MS
           predicates:
             - Path=/api/v1/stockage-facture/**
+server:
+  port: 8100
