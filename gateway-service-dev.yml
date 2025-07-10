@@ -5,11 +5,11 @@ spring:
         - id: analyse-facture-ms
           uri: lb:http://ANALYSE-FACTURE-MS
           predicates:
-            - Path=/api/v1/analyse-facture/**
+            - Path=/analyse-facture/**
 
         - id: stockage-facture-ms
           uri: lb:http://STOCKAGE-FACTURE-MS
           predicates:
-            - Path=/api/v1/stockage-facture/**
+            - Path=/stockage-facture/**
 server:
   port: 8100
