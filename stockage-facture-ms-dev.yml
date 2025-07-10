@@ -4,7 +4,7 @@ spring:
     show-sql: true
     generate-ddl: false
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     defer-datasource-initialization: true
   datasource:
     url: jdbc:postgresql://localhost:5432/factureDB
@@ -16,4 +16,3 @@ spring:
       mode: always
 server:
   port: 8089
-
