@@ -16,3 +16,7 @@ spring:
       mode: always
 server:
   port: 8083
+  
+springdoc:
+  swagger-ui:
+    path: /api/v1/stockage-facture/swagger-ui.html
