@@ -11,5 +11,10 @@ spring:
           uri: lb:http://STOCKAGE-FACTURE-MS
           predicates:
             - Path=/api/v1/stockage-facture/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:8080/realms/portnet"
 server:
   port: 8100
