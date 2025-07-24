@@ -16,7 +16,7 @@ spring:
           uri: lb:http://USER-MS
           predicates:
             - Path=/api/v1/user-ms/**
-            
+
   security:
     oauth2:
       resourceserver:
@@ -24,3 +24,12 @@ spring:
           issuer-uri: "http://localhost:8080/realms/portnet"
 server:
   port: 8100
+
+
+
+
+logging:
+  level:
+    root: info
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web.reactive: DEBUG
