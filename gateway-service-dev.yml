@@ -11,6 +11,12 @@ spring:
           uri: lb:http://STOCKAGE-FACTURE-MS
           predicates:
             - Path=/api/v1/stockage-facture/**
+
+        - id: user-ms
+          uri: lb:http://USER-MS
+          predicates:
+            - Path=/api/v1/user-ms/**
+            
   security:
     oauth2:
       resourceserver:
