@@ -14,5 +14,10 @@ spring:
     init:
       platform: postgres
       mode: always
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/portnet
 server:
   port: 8089
